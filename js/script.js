@@ -2,10 +2,9 @@
 ==========<: To Do List Project :>===========
 -------- -------- -------- -------- --------*/
 
-
 let input = document.querySelector("[type='text']")
 
-let addBtn = document.querySelector("[type='button'")
+let addBtn = document.querySelector("[type='button']")
 
 let taskDiv = document.querySelector(".tasks-div")
 
@@ -129,7 +128,6 @@ addBtn.onclick = function () {
 resetBtn.onclick = () => {
   let allP = document.querySelectorAll('p.task')
   for (let i = 0 ; i < allP.length ; i++){
-    console.log(allP.length)
     allP[i].remove()
   }
   resetBtn.innerHTML = ` No Tasks <i class="fa-solid fa-trash"></i>`

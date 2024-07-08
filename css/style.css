@@ -1,3 +1,14 @@
+
+@font-face {
+  font-family: iphoneFont;
+  src: url(../webfonts/Iphone-font.ttf);
+}
+
+* {
+  transition-duration: .5s;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: iphoneFont;
+}
 h1 {
   width: fit-content;
   margin: auto;
@@ -17,10 +28,7 @@ h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-* {
-  transition-duration: .5s;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+
 a {
   text-decoration: none;
   user-select: none;
