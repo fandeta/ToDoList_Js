@@ -1,0 +1,224 @@
+h1 {
+  width: fit-content;
+  margin: auto;
+  color: red;
+  font-weight: bolder;
+  font-size: 39px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #edebeb;
+  padding: 10px 20px;
+  border-radius: 19px;
+  border-bottom: 5px solid;
+  margin-bottom: 50px;
+  text-transform: capitalize;
+  text-align: center;
+  background: #FF0000;
+  background: linear-gradient(to left, #FF0000 0%, #5DE1FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+* {
+  transition-duration: .5s;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+a {
+  text-decoration: none;
+  user-select: none;
+}
+
+.main-div{
+  margin: auto;
+  border-radius: 15px;
+  padding: 10px;
+  background-color: #eee;
+  width:800px ;
+  height: 80px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+input[placeholder]{
+  text-transform: capitalize;
+  width: 600px;
+  height: 34px;
+  margin-right: 10px;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid transparent;
+  transition-duration: .5s;
+  font-weight: 500;
+}
+input[placeholder="Field Is Empty!"]::placeholder{
+  color: red;
+  font-weight: bold;
+}
+input[placeholder]:focus{
+  outline: none;
+  font-size: 16px;
+  border: 1px solid #1de61d;
+}
+input[value]{
+  cursor: pointer;
+  text-align: center;
+  height: 52px;
+  border: 2px solid #1de61d;
+  font-size: 16px;
+  border-radius: 10px;
+  color: white;
+  background-color: #1de61d;
+  font-weight: bold;
+  width: 90px;
+}
+input[value]:hover{
+  border-color: orangered;
+  background-color: orangered;
+}
+
+.fa-hourglass-half {
+  color: #bfb0b0;
+  font-size: 14px;
+  margin-right: 7px;
+  padding: 5px;
+}
+.fa-check{
+  color: #1de61d;
+  font-size: 14px;
+  padding: 5px;
+  padding-right:8px ;
+}
+
+.tasks-div{
+  position: relative;
+  margin: 20px auto;
+  background-color: #eee;
+  width: 800px;
+  padding: 10px;
+  border-radius: 10px;
+  min-height: 50px;
+}
+@media (max-width:991px) {
+  input[value] {
+    width: fit-content;
+    height: 30px;
+  }
+  input[placeholder] {
+    height: 15px;
+  }
+  .main-div {
+    height: 40px;
+    width: 80%;
+  }
+  .tasks-div {
+    width: 80%;
+  }
+  h2 {
+    margin: 10px auto 30px auto !important;
+  }
+}
+@media (max-width:431px){
+  input[placeholder],
+  input[placeholder]:focus{
+    width: fit-content;
+    font-size: 13.5px;
+  }
+  p span:nth-of-type(2) {
+    font-size: 14px;
+  }
+  #del-btn{
+    font-size: 12px;
+  }
+}
+.task{
+  background-color: #fff;
+  padding: 10px;
+  padding-right: 70px;
+  text-transform: capitalize;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px #bfb0b0;
+  position: relative;
+}
+#del-btn{
+  cursor: pointer;
+  text-align: center;
+  height: auto;
+  padding: 3px;
+  border: 2px solid orangered;
+  font-size: 13px;
+  border-radius: 10px;
+  color: white;
+  background-color: red;
+  font-weight: bold;
+  width: auto;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+h2 {
+  text-align: center;
+  margin: 0;
+  font-size: 21px;
+  text-transform: initial;
+  width: fit-content;
+  margin: 3px auto;
+  border-bottom: 2px solid red;
+  border-radius: 6px;
+  padding: 5px 10px;
+  box-shadow: 0px 1px 19px 2px #ddd;
+  background-color: #fffafa8c;
+  word-spacing: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h2 span {
+  margin: 0 4px;
+}
+.h2-icon {
+  font-size: 19px !important;
+  border-radius: 50%;
+  margin-top: 2px;
+  margin-left: 2px;
+  padding: 3px !important;
+  color: #1de61d;
+
+}
+p span:nth-of-type(2){
+  border-left: 3px solid red;
+  border-radius: 5px;
+  padding-left: 4px;
+  margin-left: 4px;
+}
+button{
+  display: block;
+  margin: auto;
+  font-size: 17px;
+  font-weight: bold;
+  color: black;
+  opacity: .7;
+  background-color: red;
+  color: white;
+  border: none;
+  box-shadow: 0 0 15px 0px red;
+  border-radius: 10px;
+  padding: 7px 15px;
+  letter-spacing: 1px;
+  transition-duration: .3s;
+  cursor: pointer;
+}
+button i {
+  transition-duration: .3s;
+  padding: 5px;
+  color: white;
+}
+button:hover {
+  opacity: 1;
+  background-color: red;
+  color: white;
+}
+button:hover i {
+  color: white;
+}
