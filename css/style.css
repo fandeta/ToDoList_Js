@@ -19,12 +19,13 @@ h1 {
   background-color: #edebeb;
   padding: 10px 20px;
   border-radius: 19px;
-  border-bottom: 5px solid;
+  border-bottom: 4px solid #31bedd73;
   margin-bottom: 50px;
   text-transform: capitalize;
   text-align: center;
   background: #FF0000;
-  background: linear-gradient(to left, #FF0000 0%, #5DE1FF 100%);
+  /* background: linear-gradient(to left, #FF0000 0%, #5DE1FF 100%); */
+  background: linear-gradient(to left, #0a54ffb0 0%, #70f9fb 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -49,7 +50,9 @@ a {
 input[placeholder]{
   text-transform: capitalize;
   width: 600px;
+  width: 650px;
   height: 34px;
+  height: 28px;
   margin-right: 10px;
   border-radius: 10px;
   border: none;
@@ -64,6 +67,7 @@ input[placeholder="Field Is Empty!"]::placeholder{
   color: red;
   font-weight: bold;
   font-family: 'iphoneFont';
+  user-select: none;
 }
 input[placeholder]:focus{
   outline: none;
@@ -71,21 +75,27 @@ input[placeholder]:focus{
   border: 1px solid #1de61d;
   font-family: 'iphoneFont';
 }
-input[value]{
+#add-btn{
   cursor: pointer;
   text-align: center;
   height: 52px;
-  border: 2px solid #1de61d;
+  height: 48px;
+  border: 2px solid #eee;
   font-size: 16px;
   border-radius: 10px;
   color: white;
-  background-color: #1de61d;
   font-weight: bold;
   width: 90px;
+  width: 67px;
+  background: linear-gradient(to left, #1de61d 0%, #ff0000 100%);
+  background: linear-gradient(to left, #1de61d 0%, #00ff1a 100%);
+  transition-duration: .3s;
+
 }
-input[value]:hover{
-  border-color: orangered;
-  background-color: orangered;
+#add-btn:hover{
+  background-color: red;
+  background: linear-gradient(to left, #e60707 0%, #ff0000 100%);
+
 }
 
 .fa-hourglass-half {
@@ -94,13 +104,17 @@ input[value]:hover{
   margin-right: 7px;
   padding: 5px;
 }
+
 .fa-check{
   color: #1de61d;
   font-size: 14px;
+  font-size: 15.5px;
   padding: 5px;
   padding-right:8px ;
 }
-
+#add-btn i {
+  font-size: 25px;
+}
 .tasks-div{
   position: relative;
   margin: 20px auto;
@@ -110,10 +124,129 @@ input[value]:hover{
   border-radius: 10px;
   min-height: 50px;
 }
+
+.task{
+  background-color: #fff;
+  padding: 10px;
+  padding-right: 70px;
+  text-transform: capitalize;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px #bfb0b0;
+  position: relative;
+}
+#del-btn{
+  cursor: pointer;
+  text-align: center;
+  height: auto;
+  border: 2px solid white;
+  font-size: 14px;
+  border-radius: 10px;
+  color: white;
+  background-color: red;
+  font-weight: bold;
+  width: auto;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 6px 9px;
+  opacity: .5;
+}
+#del-btn:hover{
+  opacity: 1;
+}
+h2 {
+  text-align: center;
+  margin: 0;
+  font-size: 21px;
+  text-transform: initial;
+  width: fit-content;
+  margin: 3px auto;
+  border-bottom: 2px solid #6de6e7;
+  border-radius: 6px;
+  padding: 5px 10px;
+  box-shadow: 1px 8px 19px 2px #00000042;
+  background-color: #fffafa8c;
+  word-spacing: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000000c4;
+}
+h2 span {
+  margin: 0 4px;
+}
+.h2-icon {
+  font-size: 20px !important;
+  border-radius: 50%;
+  margin-top: 2px;
+  margin-left: 2px;
+  padding: 3px !important;
+  color: #1de61d;
+
+}
+p span:nth-of-type(2){
+  border-left: 3px solid red;
+  border-radius: 5px;
+  padding-left: 4px;
+  margin-left: 4px;
+}
+#reset-btn{
+  user-select: none;
+  display: block;
+  margin: auto;
+  font-size: 17px;
+  font-weight: bold;
+  color: black;
+  opacity: .55;
+  background-color: red;
+  color: white;
+  border: none;
+  box-shadow: 0 0 5px 0px red;
+  border-radius: 10px;
+  padding: 7px 15px;
+  letter-spacing: 1px;
+  transition-duration: .3s;
+  cursor: pointer;
+  background: linear-gradient(to left, #dd0000 0%, #3e39d5b0 100%);
+  background: linear-gradient(to left, #e60707 0%, #ff0000 100%);
+}
+#reset-btn:hover{
+  opacity: 1;
+}
+#reset-btn i {
+  transition-duration: .3s;
+  padding: 5px;
+  color: white;
+}
+/* Responsive in All Screen Sizes */
+
+@media (min-width:1299px) {
+  .tasks-div,
+  .main-div{
+    width: 80%;
+  }
+  input[placeholder]{
+    width: 87%;
+  }
+  .task{
+    font-size: 20px;
+  }
+  .fa-check,
+  .fa-hourglass-half {
+    font-size: 19px;
+  }
+}
 @media (max-width:991px) {
-  input[value] {
-    width: fit-content;
-    height: 30px;
+  #add-btn {
+    /* width: fit-content;
+    height: 30px; */
+    width: 60px;
+    height: 36px;
+  }
+  #add-btn i {
+    font-size: 19px;
   }
   input[placeholder] {
     height: 15px;
@@ -130,9 +263,14 @@ input[value]:hover{
   }
 }
 @media (max-width:431px){
+  h2 {
+    font-size: 17px;
+    padding: 3px 7px;
+  }
   input[placeholder],
   input[placeholder]:focus{
     width: fit-content;
+    width: 100%;
     font-size: 13.5px;
   }
   p span:nth-of-type(2) {
@@ -141,96 +279,5 @@ input[value]:hover{
   #del-btn{
     font-size: 12px;
   }
-}
-.task{
-  background-color: #fff;
-  padding: 10px;
-  padding-right: 70px;
-  text-transform: capitalize;
-  font-weight: bold;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px #bfb0b0;
-  position: relative;
-}
-#del-btn{
-  cursor: pointer;
-  text-align: center;
-  height: auto;
-  padding: 3px;
-  border: 2px solid orangered;
-  font-size: 13px;
-  border-radius: 10px;
-  color: white;
-  background-color: red;
-  font-weight: bold;
-  width: auto;
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-h2 {
-  text-align: center;
-  margin: 0;
-  font-size: 21px;
-  text-transform: initial;
-  width: fit-content;
-  margin: 3px auto;
-  border-bottom: 2px solid red;
-  border-radius: 6px;
-  padding: 5px 10px;
-  box-shadow: 0px 1px 19px 2px #ddd;
-  background-color: #fffafa8c;
-  word-spacing: 3px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-h2 span {
-  margin: 0 4px;
-}
-.h2-icon {
-  font-size: 19px !important;
-  border-radius: 50%;
-  margin-top: 2px;
-  margin-left: 2px;
-  padding: 3px !important;
-  color: #1de61d;
 
-}
-p span:nth-of-type(2){
-  border-left: 3px solid red;
-  border-radius: 5px;
-  padding-left: 4px;
-  margin-left: 4px;
-}
-button{
-  display: block;
-  margin: auto;
-  font-size: 17px;
-  font-weight: bold;
-  color: black;
-  opacity: .7;
-  background-color: red;
-  color: white;
-  border: none;
-  box-shadow: 0 0 15px 0px red;
-  border-radius: 10px;
-  padding: 7px 15px;
-  letter-spacing: 1px;
-  transition-duration: .3s;
-  cursor: pointer;
-}
-button i {
-  transition-duration: .3s;
-  padding: 5px;
-  color: white;
-}
-button:hover {
-  opacity: 1;
-  background-color: red;
-  color: white;
-}
-button:hover i {
-  color: white;
 }
